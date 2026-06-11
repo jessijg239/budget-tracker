@@ -340,8 +340,8 @@ function renderDash() {
   const tl=el("div"); tl.appendChild(el("div",{text:`Hola, ${state.data.name} 👋`,style:{fontSize:"16px",fontWeight:"600"}}));
   tl.appendChild(el("div",{text:monthStr,style:{fontSize:"11px",color:"#777"}}));
   const nav=el("div",{style:{display:"flex",gap:"6px"}});
-  nav.appendChild(el("button",{text:"‹",style:{background:"none",border:"1px solid #333",borderRadius:"6px",padding:"3px 10px",cursor:"pointer",fontSize:"13px",color:"#e8e8e8"},onclick:()=>{let m=state.cm-1,y=state.cy;if(m<0){m=11;y--;}state.cm=m;state.cy=y;render();}}));
-  nav.appendChild(el("button",{text:"›",style:{background:"none",border:"1px solid #333",borderRadius:"6px",padding:"3px 10px",cursor:"pointer",fontSize:"13px",color:"#e8e8e8"},onclick:()=>{let m=state.cm+1,y=state.cy;if(m>11){m=0;y++;}state.cm=m;state.cy=y;render();}}));
+  nav.appendChild(el("button",{text:"‹",style:{background:"none",border:"1px solid #e8e8e8",borderRadius:"6px",padding:"3px 10px",cursor:"pointer",fontSize:"13px",color:"#1a1a1a"},onclick:()=>{let m=state.cm-1,y=state.cy;if(m<0){m=11;y--;}state.cm=m;state.cy=y;render();}}));
+  nav.appendChild(el("button",{text:"›",style:{background:"none",border:"1px solid #e8e8e8",borderRadius:"6px",padding:"3px 10px",cursor:"pointer",fontSize:"13px",color:"#1a1a1a"},onclick:()=>{let m=state.cm+1,y=state.cy;if(m>11){m=0;y++;}state.cm=m;state.cy=y;render();}}));
   append(top,tl,nav); wrap.appendChild(top);
 
   // banner sin ingresos
